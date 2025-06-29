@@ -12,7 +12,7 @@ scope = [
 ]
 
 # Load credentials from JSON file (downloaded from Google Cloud Console)
-creds = service_account.Credentials.from_service_account_file('/etc/secrets/project-a462568f0ad8.json')
+creds = service_account.Credentials.from_service_account_file('/etc/secrets/project-a462568f0ad8.json',scopes=scope)
 
 def fetch_data():
 
