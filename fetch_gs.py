@@ -4,7 +4,6 @@ from google.oauth2 import service_account
 import os
 import json
 
-creds_json = os.environ.get('GOOGLE_CREDS_JSON')
 
 # Define API scopes
 scope = [
@@ -13,8 +12,7 @@ scope = [
 ]
 
 # Load credentials from JSON file (downloaded from Google Cloud Console)
-creds = service_account.Credentials.from_service_account_info(json.loads(creds_json))
-
+creds = service_account.Credentials.from_service_account_file('/etc/secrets/project-a462568f0ad8.json')
 
 def fetch_data():
 
